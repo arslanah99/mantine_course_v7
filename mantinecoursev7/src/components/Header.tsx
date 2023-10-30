@@ -1,9 +1,7 @@
 import { Flex, Burger, Button, useMantineColorScheme, useComputedColorScheme, AppShell } from '@mantine/core';
 import { FaSun, FaMoon } from 'react-icons/fa';
-import { useDisclosure } from '@mantine/hooks';
 
-const Header = () => {
-  const [opened, { toggle }] = useDisclosure();
+const Header = ({toggle, opened}: any) => {
   const { setColorScheme } = useMantineColorScheme();
   const computedColorScheme = useComputedColorScheme('light');
 
